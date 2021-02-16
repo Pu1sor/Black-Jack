@@ -5,6 +5,7 @@
 #House Clarifications:
 #1. We do not allow insurance while splitting pairs.
 #2. Insurance bet is placed after you complete your hand.
+#
 
 import random
 from random import shuffle
