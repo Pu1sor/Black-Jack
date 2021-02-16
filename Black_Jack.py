@@ -469,7 +469,7 @@ class Game:
     def normal_round_complete(self):
         print("\nHand Completed")
         if self.player.insurance == True:
-            y = range(0,((self.player.money/2)+1))
+            y = range(0,(int(self.player.money/2)+1))
             x = int(self.player.money/2)
             responz = self.response_handler(f"Enter an insurance amount between $0-{x}: ", y, int_tag = True)
             self.quit_anytime(responz)
