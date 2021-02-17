@@ -5,7 +5,6 @@
 #House Clarifications:
 #1. We do not allow insurance while splitting pairs.
 #2. Insurance bet is placed after you complete your hand.
-#
 
 import random
 from random import shuffle
@@ -240,7 +239,7 @@ class Game:
             reveal = input("Press enter to turn in chips...\n")
             self.quit_anytime(reveal)
         if self.player.insurance == True:
-            y = range(0,((self.player.money/2)+1))
+            y = range(0,(int(self.player.money/2)+1))
             x = int(self.player.money/2)
             responz = self.response_handler(f"Enter an insurance amount between $0-{x}: ", y, int_tag = True)
             self.quit_anytime(responz)
@@ -253,7 +252,7 @@ class Game:
         print(f"Dealer Cards: {', '.join(map(str, dealer_card_count_str))}")
         if self.player.insurance == True:
             if self.dealer.card[1][0] == 10:
-                y = range(0,((self.player.money/2)+1))
+                y = range(0,(int(self.player.money/2)+1))
                 x = int(self.player.money/2)
                 responz = self.response_handler(f"Enter an insurance amount between $0-{x}: ", y, int_tag = True)
                 print("Insurance payed out...")
